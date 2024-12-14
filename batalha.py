@@ -43,7 +43,7 @@ class Arqueiro(Personagem):
         for enemy in enemies:
             if self != enemy:
                 enemy.vida-=15
-        print(f"{self.nome} usa Chuva de Flechas e Causa {15} de Dano a Todos os Inimigos!")
+                print(f"{self.nome} usa Chuva de Flechas e Causa {15} de Dano a Todos os Inimigos!")
 
 def importar_personagens(caminho):
     with open(caminho, 'r')as characters:
@@ -87,9 +87,9 @@ print(personagens[0])
 personagens[0].especial()
 print(personagens[0])
 
-personagens[1].especial([personagens[0], personagens[2]])
+personagens[1].especial([personagens[0], personagens[1]])
 print(personagens[0])
-print(personagens[2])
+print(personagens[1])
 
 personagens[2].especial(personagens[1])
 print(personagens[1])
